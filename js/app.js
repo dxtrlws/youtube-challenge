@@ -20,7 +20,6 @@ function getDataFromYoutube(searchTerm, callback) {
 
 function displayResults(data) {
     var resultElement = '';
-    debugger;
     data.items.forEach(function (item) {
         resultElement = '<img src="' + item.snippet.thumbnails.medium.url + '">' +
             '<p>' + item.snippet.title + '</p>';
