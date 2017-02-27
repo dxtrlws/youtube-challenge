@@ -20,13 +20,24 @@ function getDataFromYoutube(searchTerm, callback) {
 
 function displayResults(data) {
     var resultElement = '';
-    data.items.forEach(function (item) {
-        resultElement = '<img src="' + item.snippet.thumbnails.medium.url + '">' +
-            '<p>' + item.snippet.title + '</p>';
+    debugger;
+    $.each(data.items, function(key, item){
+        resultElement += '<p>'+ item.snippet.title + '</p>';
+        
     });
-
-    $('.js-results').html(resultElement);
+        $('.js-results').html(resultElement);
+    
 }
+
+// function displayResults(data) {
+//     var resultElement = '';
+//     data.items.forEach(function (item) {
+//         resultElement = '<img src="' + item.snippet.thumbnails.medium.url + '">' +
+//             '<p>' + item.snippet.title + '</p>';
+//     });
+
+//     $('.js-results').html(resultElement);
+// }
 
 //Event listener
 function formWatch() {
