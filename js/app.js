@@ -9,7 +9,7 @@ function getDataFromYoutube(searchTerm, callback) {
         q: searchTerm,
         part: 'snippet',
         key: apiKey,
-        maxResults: 10,
+        maxResults: 5,
         order: 'date',
 
 
@@ -20,14 +20,14 @@ function getDataFromYoutube(searchTerm, callback) {
 
 function displayResults(data) {
     var resultElement = '';
-    debugger;
     $.each(data.items, function(key, item){
         var vidTitle = item.snippet.title;
         var vidImage = item.snippet.thumbnails.high.url;
         var vidId = item.id.videoId;
         var vidUrl = 'https://www.youtube.com/watch?v='
-        resultElement += '<img src="'+vidImage+'">' +
-        '<p><a href="' + vidUrl + vidId+'">'+ item.snippet.title + '</a></p>';
+        resultElement +=
+        '<img class="img-responsive" src="'+vidImage+'">' +
+        '<p><a href="' + vidUrl + vidId+'">'+ item.snippet.title + '</a></p></div>';
         
     });
         $('.js-results').html(resultElement);
