@@ -1,3 +1,13 @@
+body {
+    background-color: #666;
+}
+
 form {
     margin-bottom: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 5px;
 }
