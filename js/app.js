@@ -22,10 +22,16 @@ function displayResults(data) {
     var resultElement = '';
     debugger;
     $.each(data.items, function(key, item){
-        resultElement += '<p>'+ item.snippet.title + '</p>';
+        var vidTitle = item.snippet.title;
+        var vidImage = item.snippet.thumbnails.high.url;
+        var vidId = item.id.videoId;
+        var vidUrl = 'https://www.youtube.com/watch?v='
+        resultElement += '<img src="'+vidImage+'">' +
+        '<p><a href="' + vidUrl + vidId+'">'+ item.snippet.title + '</a></p>';
         
     });
         $('.js-results').html(resultElement);
+        console.log('video URL' + vidUrl);
     
 }
 
