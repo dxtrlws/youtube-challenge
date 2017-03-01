@@ -35,16 +35,6 @@ function displayResults(data) {
     
 }
 
-// function displayResults(data) {
-//     var resultElement = '';
-//     data.items.forEach(function (item) {
-//         resultElement = '<img src="' + item.snippet.thumbnails.medium.url + '">' +
-//             '<p>' + item.snippet.title + '</p>';
-//     });
-
-//     $('.js-results').html(resultElement);
-// }
-
 //Event listener
 function formWatch() {
     $('#search').click(function (e) {
